@@ -31,10 +31,7 @@ echo
 
 unset depend senseiDebug
 
-if [ -d "$Sensei_DIR" ]
-then
-    depend="Sensei_DIR=$Sensei_DIR"
-fi
+depend="Sensei_DIR=$Sensei_DIR"
 
 
 if [ "$targetType" = objects ]
