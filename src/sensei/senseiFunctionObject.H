@@ -129,7 +129,7 @@ private:
   stringList scripts_;
 
   //- The sensei coprocess
-  autoPtr<sensei::coprocess> adaptor_;
+  autoPtr<sensei::OFDataAdaptor> adaptor_;
 
   //- Pointers to the requested sensei inputs
   PtrList<sensei::senseiInput> inputs_;

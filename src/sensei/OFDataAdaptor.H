@@ -25,6 +25,7 @@ License
     along with OpenFOAM.  If not, see <http://www.gnu.org/licenses/>.
 \*---------------------------------------------------------------------------*/
 
+#include "sensei/senseiConfig.h"
 #include "sensei/DataAdaptor.h"
 
 namespace Foam
