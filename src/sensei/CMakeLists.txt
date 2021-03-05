@@ -76,7 +76,7 @@ link_directories(
 
 
 find_package(SENSEI REQUIRED)
-
+find_package(MPI REQUIRED)
 
 file(GLOB SOURCE_FILES
     senseiFunctionObject.C
@@ -115,17 +115,10 @@ add_library(
     ${SOURCE_FILES}
 )
 
-set_target_properties(
-    senseiFoam
-    PROPERTIES
-    VERSION ${PARAVIEW_VERSION_MAJOR}.${PARAVIEW_VERSION_MINOR}.${PARAVIEW_VERSION_PATCH}
-    SOVERSION ${PARAVIEW_VERSION_MAJOR}.${PARAVIEW_VERSION_MINOR}
-)
-
 target_link_libraries(
     senseiFoam
     sensei
-    ${LINK_LIBRARIES}
+    MPI::MPI_CXX
     ${OPENFOAM_LIBRARIES}
 )
 
